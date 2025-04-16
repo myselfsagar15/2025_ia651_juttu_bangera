@@ -10,12 +10,12 @@ Fraudulent transaction detection is a major challenge in real-time systems due t
 - **Total Records**: 284,807 transactions
 - **Attributes**: 30 features including anonymized PCA components (V1 to V28), `Time`, `Amount`, and `Class` (0: Legitimate, 1: Fraudulent)
 
-
 ## Methodology
 
 ### Preprocessing
-- Normalization and scaling applied to numerical attributes
-- Dimensionality reduction performed using Uniform Manifold Approximation and Projection (UMAP)
+- Normalization using `StandardScaler` and `MinMaxScaler`
+- Feature selection based on variance and correlation
+- Dimensionality reduction using **UMAP** for better separability of anomalies in 2D space
 
 ### Exploratory Data Analysis
 - Analyzed time-of-day patterns and distribution of principal components
@@ -23,18 +23,44 @@ Fraudulent transaction detection is a major challenge in real-time systems due t
   - Fraudulent transactions occur more frequently during early hours (0–6)
   - Distinct distributions observed in features V1 to V9 between fraud and normal classes
 
-### Models Implemented
-- **Isolation Forest**: An ensemble-based method that isolates anomalies
-- **Local Outlier Factor**: A density-based method to detect local deviations
+## Data Visualization
 
+Visual analytics were performed to understand feature distributions and identify patterns that differentiate fraud from legitimate transactions:
 
-## Evaluation
+- **KDE (Kernel Density Estimate) Plots**:
+  - Compared distributions for high-variance features such as `V1`, `V4`, and `V6`
+  - Fraudulent transactions showed distinct non-Gaussian spread, especially in early morning hours (`Time`)
+
+- **Heatmap of Correlations**:
+  - Highlighted strong negative/positive correlation between certain PCA components and class labels
+
+- **UMAP Projections**:
+  - 2D visualization using UMAP demonstrated strong separability of outliers, validating its utility for anomaly detection
+
+- **Histograms and Boxplots**:
+  - Used to observe skewness and interquartile ranges of `Amount`, `Time`, and selected V-features
+
+- **Class Distribution Plot**:
+  - Displayed the extreme class imbalance (~0.17% fraud)
+
+## Models Implemented
+
+- **Isolation Forest** (`sklearn.ensemble.IsolationForest`)
+  - Works by recursively partitioning data; fewer splits indicate anomalies
+
+- **Local Outlier Factor (LOF)** (`sklearn.neighbors.LocalOutlierFactor`)
+  - Detects local density deviations from neighbors
+
+- **Evaluation Metrics**:
+  - **Precision**: Proportion of correctly identified frauds out of total predicted frauds
+  - **Recall**: Proportion of correctly identified frauds out of all true frauds
+  - **F1-Score**: Harmonic mean of precision and recall
 
 | Metric        | Isolation Forest | Local Outlier Factor |
 |---------------|------------------|-----------------------|
-| Precision     | ~0.09            | ~0.06                |
-| Recall        | ~0.30            | ~0.16                |
-| F1-Score      | ~0.14            | ~0.09                |
+| Precision     | ~0.09            | ~0.06                 |
+| Recall        | ~0.30            | ~0.16                 |
+| F1-Score      | ~0.14            | ~0.09                 |
 
 - **Confusion Matrix** and **Classification Reports** provided for both models.
 - Isolation Forest demonstrated better performance overall in terms of recall.
@@ -61,7 +87,13 @@ Fraudulent transaction detection is a major challenge in real-time systems due t
 
 ## Conclusion
 
-Unsupervised learning is effective for fraud detection in the absence of labeled data. Time-based patterns and principal components such as V4 and V6 provide useful insights. Isolation Forest outperforms LOF in this context, offering a better balance between false positives and true fraud detection.
+- Time-based features and PCA components (e.g., V4, V6, V7) were effective in distinguishing fraud
+
+- UMAP visualization revealed separable clusters for anomalies
+
+- Isolation Forest yielded better recall, making it suitable for fraud detection in highly imbalanced datasets
+
+- The methodology can be extended to real-time pipelines using streaming anomaly detection frameworks
 
 
 ## Acknowledgment
