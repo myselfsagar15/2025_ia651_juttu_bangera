@@ -1,0 +1,9 @@
+joblib
+matplotlib
+numpy
+pandas
+pyod
+seaborn
+sklearn
+umap
+umap-learn
