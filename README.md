@@ -35,6 +35,8 @@ Visual analytics were performed to understand feature distributions and identify
 
 - **Heatmap of Correlations**:
   - Highlighted strong negative/positive correlation between certain PCA components and class labels
+  ![image](https://github.com/user-attachments/assets/3bd167d4-5d35-43da-9979-e3456bd967eb)
+
 
 - **UMAP Projections**:
   - 2D visualization using UMAP demonstrated strong separability of outliers, validating its utility for anomaly detection
