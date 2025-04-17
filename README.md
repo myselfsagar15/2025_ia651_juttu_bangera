@@ -45,6 +45,8 @@ Visual analytics were performed to understand feature distributions and identify
 
 - **Histograms and Boxplots**:
   - Used to observe skewness and interquartile ranges of `Amount`, `Time`, and selected V-features
+  ![image](https://github.com/user-attachments/assets/26d20d63-8702-4bd3-b95e-f920a6c507b7)
+
 
 - **Class Distribution Plot**:
   - Displayed the extreme class imbalance (~0.17% fraud)
