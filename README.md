@@ -57,6 +57,8 @@ Visual analytics were performed to understand feature distributions and identify
 
 - **Isolation Forest** (`sklearn.ensemble.IsolationForest`)
   - Works by recursively partitioning data; fewer splits indicate anomalies
+  ![image](https://github.com/user-attachments/assets/5413ca08-d37d-4cf2-85fd-14527bf71f9b)
+
 
 - **Local Outlier Factor (LOF)** (`sklearn.neighbors.LocalOutlierFactor`)
   - Detects local density deviations from neighbors
@@ -66,11 +68,11 @@ Visual analytics were performed to understand feature distributions and identify
   - **Recall**: Proportion of correctly identified frauds out of all true frauds
   - **F1-Score**: Harmonic mean of precision and recall
 
-| Metric        | Isolation Forest | Local Outlier Factor |
+| Metric        | Isolation Forest | Local Outlier Factor  |
 |---------------|------------------|-----------------------|
-| Precision     | ~0.09            | ~0.06                 |
-| Recall        | ~0.30            | ~0.16                 |
-| F1-Score      | ~0.14            | ~0.09                 |
+| Precision     | ~0.16            | ~0.08                 |
+| Recall        | ~0.33            | ~0.18                 |
+| F1-Score      | ~0.22            | ~0.11                 |
 
 - **Confusion Matrix** and **Classification Reports** provided for both models.
 - Isolation Forest demonstrated better performance overall in terms of recall.
