@@ -30,18 +30,24 @@ Visual analytics were performed to understand feature distributions and identify
 - **KDE (Kernel Density Estimate) Plots**:
   - Compared distributions for high-variance features such as `V1`, `V4`, and `V6`
   - Fraudulent transactions showed distinct non-Gaussian spread, especially in early morning hours (`Time`)
+  ![image](https://github.com/user-attachments/assets/d6f23626-fe47-407a-801a-5e03c455b612)
+
 
 - **Heatmap of Correlations**:
   - Highlighted strong negative/positive correlation between certain PCA components and class labels
 
 - **UMAP Projections**:
   - 2D visualization using UMAP demonstrated strong separability of outliers, validating its utility for anomaly detection
+  ![image](https://github.com/user-attachments/assets/84c62416-0710-4637-b38a-5301f52815b3)
+
 
 - **Histograms and Boxplots**:
   - Used to observe skewness and interquartile ranges of `Amount`, `Time`, and selected V-features
 
 - **Class Distribution Plot**:
   - Displayed the extreme class imbalance (~0.17% fraud)
+  ![image](https://github.com/user-attachments/assets/ba80132e-6b14-49ae-b9f6-a5ccb98c0143)
+
 
 ## Models Implemented
 
