@@ -3,6 +3,8 @@
 ## Abstract
 Fraudulent transaction detection is a major challenge in real-time systems due to the scarcity and imbalance of labeled data. This project applies unsupervised learning techniques—Isolation Forest and Local Outlier Factor (LOF)—to detect anomalies in credit card transaction data. The methodology includes dimensionality reduction, exploratory data analysis, and performance benchmarking based on precision, recall, and F1-score.
 
+## Problem Statement
+Credit card fraud is a significant financial crime that causes billions of dollars in losses annually. Detecting fraudulent transactions in real-time is difficult due to the imbalance between legitimate and fraudulent transactions and the scarcity of labeled fraudulent data. Unsupervised anomaly detection techniques provide an effective solution by identifying outliers and hidden patterns without requiring labeled data. This project compares two unsupervised models—Isolation Forest and Local Outlier Factor (LOF)—to detect anomalies in credit card transaction data.
 
 ## Dataset
 
@@ -13,9 +15,11 @@ Fraudulent transaction detection is a major challenge in real-time systems due t
 ## Methodology
 
 ### Preprocessing
-- Normalization using `StandardScaler` and `MinMaxScaler`
-- Feature selection based on variance and correlation
-- Dimensionality reduction using **UMAP** for better separability of anomalies in 2D space
+- Normalization: Standardization of Amount using StandardScaler and MinMaxScaler to ensure that all features are on the same scale for better 
+  performance.
+- Feature Selection: Selection of key features based on variance and correlation, focusing on features with high variance that can provide 
+  more discriminative power.
+- Dimensionality Reduction: Applied UMAP (Uniform Manifold Approximation and Projection) for better separability of anomalies in a 2D space.
 
 ### Exploratory Data Analysis
 - Analyzed time-of-day patterns and distribution of principal components
@@ -77,6 +81,10 @@ Visual analytics were performed to understand feature distributions and identify
 - **Confusion Matrix** and **Classification Reports** provided for both models.
 - Isolation Forest demonstrated better performance overall in terms of recall.
 
+## Approach & Insights
+- Unsupervised Learning: Since labeled fraud data is scarce, unsupervised models were chosen to identify outliers based on the behavior of normal transactions.
+- Dimensionality Reduction: UMAP was applied to reduce the high-dimensional data into two dimensions for better visualization and anomaly detection.
+- Time-Based Features: Patterns observed in transaction times (e.g., fraud being more prevalent in the early hours) can be valuable in detecting fraud.
 
 ## Usage
 
