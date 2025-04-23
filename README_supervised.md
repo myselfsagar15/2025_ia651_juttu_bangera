@@ -32,20 +32,22 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 
 ![Image](https://github.com/user-attachments/assets/f522d517-12cc-47fb-806f-9a91fd6550f8)
 
-![Image](https://github.com/user-attachments/assets/3d0627dd-1522-43d6-b5bf-b50c56bcce7a)
 
-![Image](https://github.com/user-attachments/assets/84b88b95-0ada-48a0-b39c-c5a366b82f38)
 
-![Image](https://github.com/user-attachments/assets/74efc821-24ab-4d2e-b5c5-5e754d71376c)
+
 
 ![Image](https://github.com/user-attachments/assets/af1f33d0-06f9-4dc2-95f1-a949bffe0a3a)
 
 
 
 - KDE plots showed distinguishable patterns for features like `V24`, `V10`, and `V14`
-- Fraud transactions had a distinct range in `Amount`, often lower than normal
-- Extreme skew in class distribution confirmed
+![Image](https://github.com/user-attachments/assets/84b88b95-0ada-48a0-b39c-c5a366b82f38)
 
+- Fraud transactions had a distinct range in `Amount`, often lower than normal
+![Image](https://github.com/user-attachments/assets/3d0627dd-1522-43d6-b5bf-b50c56bcce7a)
+
+- Extreme skew in class distribution confirmed
+![Image](https://github.com/user-attachments/assets/74efc821-24ab-4d2e-b5c5-5e754d71376c)
 ---
 
 ##  Models Implemented
