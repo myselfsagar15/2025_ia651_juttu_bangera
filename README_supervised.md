@@ -46,8 +46,9 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 - Fraud transactions had a distinct range in `Amount`, often lower than normal
 ![Image](https://github.com/user-attachments/assets/3d0627dd-1522-43d6-b5bf-b50c56bcce7a)
 
-- Extreme skew in class distribution confirmed
 ![Image](https://github.com/user-attachments/assets/74efc821-24ab-4d2e-b5c5-5e754d71376c)
+
+- Extreme skew in class distribution confirmed
 ---
 
 ##  Models Implemented
