@@ -106,5 +106,5 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 
 ##  Authors
 
-- **Ashish Varma** ,Sagar Bangera**, Clarkson University  
+- **Ashish Varma** ,**Sagar Bangera**, Clarkson University  
 - **Course**: IA651 - Applied Machine Learning
