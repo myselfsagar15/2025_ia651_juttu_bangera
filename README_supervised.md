@@ -28,6 +28,8 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 
 ##  Exploratory Data Analysis (EDA)
 
+![Image](https://github.com/user-attachments/assets/143b0671-0e05-4c7b-9735-a77d384b5a73)
+
 - KDE plots showed distinguishable patterns for features like `V24`, `V10`, and `V14`
 - Fraud transactions had a distinct range in `Amount`, often lower than normal
 - Extreme skew in class distribution confirmed
