@@ -17,7 +17,7 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 
 ---
 
-## ⚙ Preprocessing
+##  Preprocessing
 
 - Dropped `Time` feature
 - Normalized `Amount` using `StandardScaler`
