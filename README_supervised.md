@@ -40,9 +40,7 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 
 ![Image](https://github.com/user-attachments/assets/af1f33d0-06f9-4dc2-95f1-a949bffe0a3a)
 
-![Image](https://github.com/user-attachments/assets/4289e8f6-c41b-40ac-905c-36b316f801a5)
 
-![Image](https://github.com/user-attachments/assets/0ba98a76-dfdc-4538-9985-0bcabe0c6a70)
 
 - KDE plots showed distinguishable patterns for features like `V24`, `V10`, and `V14`
 - Fraud transactions had a distinct range in `Amount`, often lower than normal
@@ -85,6 +83,10 @@ This project tackles the challenge of detecting fraudulent credit card transacti
 ---
 
 ##  Dimensionality Reduction & Clustering
+
+![Image](https://github.com/user-attachments/assets/4289e8f6-c41b-40ac-905c-36b316f801a5)
+
+![Image](https://github.com/user-attachments/assets/0ba98a76-dfdc-4538-9985-0bcabe0c6a70)
 
 - **t-SNE** visualization revealed clusters of fraud on the outskirts of the normal distribution
 - **PCA** (2D) showed less separability between classes
